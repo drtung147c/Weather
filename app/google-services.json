@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "111099065355",
+    "project_id": "newweather-4bfbb",
+    "storage_bucket": "newweather-4bfbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111099065355:android:c9e5ddc466fdae4317030e",
+        "android_client_info": {
+          "package_name": "com.jaroid.android47_day9_nguyenhuutung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111099065355-3ucbfhfv1l01ffg7p19q90u491i07p7g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jaroid.android47_day9_nguyenhuutung",
+            "certificate_hash": "a20d644725cefe4d272218d8a837d927f9bae5ef"
+          }
+        },
+        {
+          "client_id": "111099065355-d2dmr8j06bif2vlrdk14vm6cumm1qgg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMs7-gYpa4f7JpwDh39u-3ByMWP1_8zLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111099065355-d2dmr8j06bif2vlrdk14vm6cumm1qgg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

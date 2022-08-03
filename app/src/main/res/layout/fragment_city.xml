@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgweather">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="191dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvCityName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hà Nội"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_25sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgWeather"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/imgweather"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCityName" />
+
+                    <TextView
+                        android:id="@+id/tvTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="18"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_60sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgWeather" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mưa"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTemp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/v1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.48" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/v2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.52" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/h1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="@drawable/bg_info"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@id/v1"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvSpeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Speed"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvSpeedValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20km/h"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvSpeed" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/h2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="@drawable/bg_info"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/v2"
+                        app:layout_constraintTop_toTopOf="@id/h1">
+
+                        <TextView
+                            android:id="@+id/tvFeeling"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Feeling"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvFeelingValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="16"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvFeeling" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/v3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.48" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/v4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.52" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/h3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="@drawable/bg_info"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@id/v3"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvPressure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Pressure"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvPressureValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1014 hPa"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvPressure" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/h4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="@drawable/bg_info"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/v4">
+
+                        <TextView
+                            android:id="@+id/tvHumidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Humidity"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvHumidityValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="95%"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvHumidity" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/v5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.48" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/v6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.52" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/h5"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="@drawable/bg_info"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@id/v5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvTimeZone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Timezone"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvTimeZoneValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="alo"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintTop_toBottomOf="@id/tvTimeZone" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/h6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="@drawable/bg_info"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/v6"
+                        tools:ignore="DuplicateIds,MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/tvCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Country"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvCountryValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VN"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintTop_toBottomOf="@id/tvCountry" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/SunsetSndSunrise"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_margin="16dp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_info">
+
+                    <TextView
+                        android:id="@+id/tvSunRise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SunRise:"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvSunRiseValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="blabla"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintStart_toEndOf="@+id/tvSunRise"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvSunSet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SunSet:"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSunRise" />
+
+                    <TextView
+                        android:id="@+id/tvSunSetValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="blabla"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintStart_toEndOf="@+id/tvSunSet"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSunRiseValue" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btnFiveDaysThreeHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_info"
+                    android:padding="@dimen/_3sdp"
+                    android:text=" 5 days and 3 hours "
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_20sdp" />
+            </LinearLayout>
+
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
